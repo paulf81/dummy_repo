@@ -89,8 +89,7 @@ except FileNotFoundError:
 
 # Load the package's VERSION module
 ROOT = Path(__file__).parent
-with open(ROOT / "hercules" / "version.py") as version_file:
-    VERSION = version_file.read().strip()
+VERSION = 0.0
 
 setup(
     name=NAME,
@@ -102,13 +101,9 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
-    # package_dir={"": "hercules"},
+
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
-    # If your package is a single module, use this instead of 'packages':
-    # py_modules=['mypackage'],
-    # entry_points={
-    #     'console_scripts': ['mycli=mymodule:cli'],
-    # },
+
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,

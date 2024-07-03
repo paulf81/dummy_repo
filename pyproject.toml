@@ -12,7 +12,7 @@ filterwarnings = [
 
 
 [tool.ruff]
-src = ["hercules", "tests"]
+src = ["dummy_repo", "tests"]
 line-length = 100
 target-version = "py310"
 extend-include = ["*.ipynb"]
